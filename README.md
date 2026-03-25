@@ -26,7 +26,7 @@ Asian Reels is a modern entertainment platform delivering reviews, news, and fea
 
 ```bash
 git clone https://github.com/BackSuit/AsianReels.git
-cd PetLifeStore
+cd AsianReels
 ```
 
 2. Install dependencies

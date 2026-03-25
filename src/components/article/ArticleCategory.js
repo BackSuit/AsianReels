@@ -23,7 +23,7 @@ export default function ArticleCategory({ category }) {
         letterSpacing="0.05em"
         transition="background-color 200ms ease-in-out"
         _hover={{
-          backgroundColor: "#9B2C2C",
+          backgroundColor: "#C7325A",
         }}
       >
         {category?.name}

@@ -120,7 +120,7 @@ function LatestNewsSidebar({ articles }) {
           textTransform="uppercase"
           letterSpacing="0.08em"
         >
-          Latest News
+          Latest Stories
         </Heading>
       </Box>
       <VStack

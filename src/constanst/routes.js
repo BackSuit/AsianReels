@@ -49,23 +49,23 @@ export const navigationLinks = [
   },
 ]
 
-// Footer links - organized for a news website
+// Footer links - organized for an Asian entertainment site
 export const footerLinks = [
   { name: "Home", path: HOME_ROUTE },
   { name: "All Articles", path: ARTICLE_ROUTE },
-  { name: "Politics", path: CATEGORY_ID_ROUTE("politics") },
-  { name: "Economy", path: CATEGORY_ID_ROUTE("economy") },
-  { name: "World", path: CATEGORY_ID_ROUTE("world") },
+  { name: "K-Drama", path: CATEGORY_ID_ROUTE("kdrama") },
+  { name: "Movies", path: CATEGORY_ID_ROUTE("movies") },
+  { name: "Anime", path: CATEGORY_ID_ROUTE("anime") },
   { name: "Authors", path: AUTHORS_ROUTE },
   { name: "About Us", path: ABOUT_US_ROUTE },
 ]
 
 // Additional footer category links
 export const footerCategoryLinks = [
-  { name: "Culture", path: CATEGORY_ID_ROUTE("culture") },
-  { name: "Sports", path: CATEGORY_ID_ROUTE("sports") },
-  { name: "Technology", path: CATEGORY_ID_ROUTE("technology") },
-  { name: "Opinion", path: CATEGORY_ID_ROUTE("opinion") },
-  { name: "Lifestyle", path: CATEGORY_ID_ROUTE("lifestyle") },
-  { name: "Tourism", path: CATEGORY_ID_ROUTE("tourism") },
+  { name: "J-Drama", path: CATEGORY_ID_ROUTE("jdrama") },
+  { name: "C-Drama", path: CATEGORY_ID_ROUTE("cdrama") },
+  { name: "Bollywood", path: CATEGORY_ID_ROUTE("bollywood") },
+  { name: "Reviews", path: CATEGORY_ID_ROUTE("reviews") },
+  { name: "Actors & Idols", path: CATEGORY_ID_ROUTE("actors") },
+  { name: "Lists & Guides", path: CATEGORY_ID_ROUTE("lists") },
 ]

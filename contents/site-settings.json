@@ -1,126 +1,97 @@
 {
-  "site_name": "Bhutan Post",
-  "site_title": "Bhutan Post",
-  "logo_text": "Bhutan Post",
-  "tagline": "Your Trusted Source for Bhutan News & Stories",
+  "site_name": "Asian Reels",
+  "site_title": "Asian Reels",
+  "logo_text": "Asian Reels",
+  "tagline": "Your Gateway to Asian Movies & Dramas",
   "instagram_account": "",
   "twitter_account": "",
-  "github": "BackSuit/BhutanPost",
-  "facebook_account": "profile.php?id=61578511603483",
-  "whatsapp": "+9779840889975",
-  "base_url": "https://bhutanpost.com",
+  "github": "BackSuit/AsianReels",
+  "facebook_account": "",
+  "whatsapp": "",
+  "base_url": "https://asianreels.com",
   "site_keywords": [
-    {
-      "keyword": "Bhutan news"
-    },
-    {
-      "keyword": "Bhutan latest news"
-    },
-    {
-      "keyword": "Bhutan politics"
-    },
-    {
-      "keyword": "Bhutan economy"
-    },
-    {
-      "keyword": "Bhutan culture"
-    },
-    {
-      "keyword": "Bhutan tourism"
-    },
-    {
-      "keyword": "Bhutan technology"
-    },
-    {
-      "keyword": "Bhutan sports"
-    },
-    {
-      "keyword": "Bhutan opinion"
-    },
-    {
-      "keyword": "Bhutan lifestyle"
-    },
-    {
-      "keyword": "South Asia news"
-    },
-    {
-      "keyword": "BhutanPost"
-    }
+    { "keyword": "Asian dramas" },
+    { "keyword": "Korean dramas" },
+    { "keyword": "K-drama reviews" },
+    { "keyword": "Japanese movies" },
+    { "keyword": "Chinese dramas" },
+    { "keyword": "Thai dramas" },
+    { "keyword": "Asian movies" },
+    { "keyword": "drama reviews" },
+    { "keyword": "Asian entertainment" },
+    { "keyword": "Bollywood" },
+    { "keyword": "anime movies" },
+    { "keyword": "Asian Reels" }
   ],
-  "site_description": "Bhutan Post is your trusted source for the latest news, in-depth analysis, and stories from Bhutan and beyond. Covering politics, economy, culture, sports, technology, and lifestyle — delivering quality journalism to keep you informed.",
-  "seo_meta_title": "Bhutan Post - Latest News, Analysis & Stories from Bhutan",
-  "seo_meta_description": "Stay informed with Bhutan Post. Breaking news, in-depth analysis, opinion pieces, and feature stories covering politics, economy, culture, sports, and lifestyle from Bhutan and South Asia.",
-  "seo_meta_keywords": "Bhutan news, Bhutan politics, Bhutan economy, Bhutan culture, Bhutan tourism, South Asia news, Bhutan sports, Bhutan technology",
-  "contact_address": "Thimphu, Bhutan",
-  "contact_phonenumber": "+975 2 321 456",
-  "contact_email": "editor@bhutanpost.com",
+  "site_description": "Asian Reels is your ultimate destination for articles, reviews, and news about Asian movies and dramas. From K-dramas and J-dramas to Bollywood blockbusters and C-dramas — discover the best of Asian entertainment.",
+  "seo_meta_title": "Asian Reels - Asian Movie & Drama Reviews, News & Articles",
+  "seo_meta_description": "Discover the best of Asian entertainment on Asian Reels. In-depth reviews, latest news, actor spotlights, and curated lists covering Korean, Japanese, Chinese, Thai dramas and movies.",
+  "seo_meta_keywords": "Asian dramas, Korean dramas, K-drama, J-drama, C-drama, Thai drama, Asian movies, Bollywood, anime movies, drama reviews, Asian entertainment",
+  "contact_address": "",
+  "contact_phonenumber": "",
+  "contact_email": "hello@asianreels.com",
   "posts_per_page": 12,
   "use_api_categories": false,
   "predefined_categories": [
     {
+      "slug": "kdrama",
+      "name": "K-Drama",
+      "description": "Reviews, recaps, and news about Korean dramas"
+    },
+    {
+      "slug": "jdrama",
+      "name": "J-Drama",
+      "description": "Coverage of Japanese dramas and live-action series"
+    },
+    {
+      "slug": "cdrama",
+      "name": "C-Drama",
+      "description": "Chinese drama reviews, recommendations, and updates"
+    },
+    {
+      "slug": "thai-drama",
+      "name": "Thai Drama",
+      "description": "Thai lakorn and BL drama reviews, news, and spotlights"
+    },
+    {
+      "slug": "movies",
+      "name": "Movies",
+      "description": "Asian movie reviews, box office news, and film festival coverage"
+    },
+    {
+      "slug": "bollywood",
+      "name": "Bollywood",
+      "description": "Bollywood movie reviews, celebrity news, and industry updates"
+    },
+    {
+      "slug": "anime",
+      "name": "Anime",
+      "description": "Anime movie and series reviews, seasonal guides, and news"
+    },
+    {
+      "slug": "reviews",
+      "name": "Reviews",
+      "description": "In-depth reviews and ratings of Asian movies and dramas"
+    },
+    {
       "slug": "news",
       "name": "News",
-      "description": "Latest news and updates from Bhutan and around the world"
+      "description": "Latest entertainment news, casting announcements, and industry updates"
     },
     {
-      "slug": "politics",
-      "name": "Politics",
-      "description": "Government updates, policy changes, and political analysis"
+      "slug": "actors",
+      "name": "Actors & Idols",
+      "description": "Profiles, interviews, and spotlights on Asian actors and idols"
     },
     {
-      "slug": "economy",
-      "name": "Economy",
-      "description": "Economic news, business updates, and market analysis"
-    },
-    {
-      "slug": "world",
-      "name": "World",
-      "description": "International news and global affairs"
-    },
-    {
-      "slug": "culture",
-      "name": "Culture",
-      "description": "Arts, traditions, festivals, and cultural heritage"
-    },
-    {
-      "slug": "sports",
-      "name": "Sports",
-      "description": "Sports news, events, and athlete features"
-    },
-    {
-      "slug": "technology",
-      "name": "Technology",
-      "description": "Tech news, innovation, and digital transformation"
+      "slug": "lists",
+      "name": "Lists & Guides",
+      "description": "Curated watchlists, top picks, and recommendation guides"
     },
     {
       "slug": "opinion",
       "name": "Opinion",
-      "description": "Editorials, op-eds, and expert commentary"
-    },
-    {
-      "slug": "lifestyle",
-      "name": "Lifestyle",
-      "description": "Health, wellness, travel, food, and everyday living"
-    },
-    {
-      "slug": "education",
-      "name": "Education",
-      "description": "Education news, academic updates, and learning resources"
-    },
-    {
-      "slug": "environment",
-      "name": "Environment",
-      "description": "Environmental news, conservation, and sustainability"
-    },
-    {
-      "slug": "tourism",
-      "name": "Tourism",
-      "description": "Travel guides, destination features, and tourism news"
-    },
-    {
-      "slug": "health",
-      "name": "Health",
-      "description": "Public health, medical news, and wellness updates"
+      "description": "Editorials, fan theories, and opinion pieces on Asian entertainment"
     }
   ],
   "navbar_groups": [
@@ -129,46 +100,44 @@
       "slug": "news"
     },
     {
-      "label": "Politics",
-      "slug": "politics"
+      "label": "Dramas",
+      "items": [
+        "kdrama",
+        "jdrama",
+        "cdrama",
+        "thai-drama"
+      ]
     },
     {
-      "label": "Economy",
-      "slug": "economy"
+      "label": "Movies",
+      "slug": "movies"
     },
     {
-      "label": "World",
-      "slug": "world"
+      "label": "Bollywood",
+      "slug": "bollywood"
     },
     {
-      "label": "Culture",
-      "slug": "culture"
+      "label": "Anime",
+      "slug": "anime"
     },
     {
-      "label": "Sports",
-      "slug": "sports"
-    },
-    {
-      "label": "Opinion",
-      "slug": "opinion"
+      "label": "Reviews",
+      "slug": "reviews"
     },
     {
       "label": "More",
       "items": [
-        "technology",
-        "lifestyle",
-        "education",
-        "environment",
-        "tourism",
-        "health"
+        "actors",
+        "lists",
+        "opinion"
       ]
     }
   ],
   "featured_categories": [
-    "politics",
-    "economy",
-    "world",
-    "culture"
+    "kdrama",
+    "movies",
+    "bollywood",
+    "anime"
   ],
   "podcast_cover_url": "https://res.cloudinary.com/yacloud/image/upload/v1614332851/ya-pod_gi1tmm.jpg",
   "mood_cover_url": "/images/mood/v5/mood-v5-cover.jpg"

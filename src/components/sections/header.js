@@ -43,7 +43,7 @@ function SearchBar() {
           <Icon as={HiSearch} color="gray.400" />
         </InputLeftElement>
         <Input
-          placeholder="Search news..."
+          placeholder="Search dramas & movies..."
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
           bg="gray.50"
@@ -53,7 +53,7 @@ function SearchBar() {
           _placeholder={{ color: "gray.400" }}
           _focus={{
             borderColor: "brand.primary",
-            boxShadow: "0 0 0 1px #C53030",
+            boxShadow: "0 0 0 1px #E53E6B",
             bg: "white",
           }}
         />
@@ -135,6 +135,7 @@ export default function Header() {
         className="header"
         borderBottom="3px solid"
         borderBottomColor="brand.primary"
+        boxShadow="0 2px 12px rgba(0,0,0,0.06)"
         sx={{
           "@supports (backdrop-filter: saturate(180%) blur(20px))": {
             backdropFilter: "saturate(180%) blur(20px)",

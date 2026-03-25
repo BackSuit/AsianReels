@@ -34,7 +34,7 @@ export default function Pagination({ current, pages, link }) {
                 bgColor={it.page === current ? "brand.primary" : "white"}
                 color={it.page === current ? "white" : "gray.600"}
                 _hover={{
-                  bgColor: it.page === current ? "#9B2C2C" : "gray.100",
+                  bgColor: it.page === current ? "#C7325A" : "gray.100",
                 }}
                 borderRadius="md"
                 size="sm"

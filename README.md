@@ -1,13 +1,13 @@
-# Bhutan Post
+# Asian Reels
 
-Bhutan Post — Your Trusted Source for Bhutan News & Stories.
+Asian Reels — Your Gateway to Asian Movies & Dramas.
 
-Bhutan Post is a modern news website delivering in-depth reporting, analysis, and feature stories covering politics, economy, culture, sports, technology, and lifestyle from Bhutan and beyond. Configuration is driven by `contents/site-settings.json`.
+Asian Reels is a modern entertainment platform delivering reviews, news, and feature articles about Asian movies and dramas. Covering K-dramas, J-dramas, C-dramas, Bollywood, anime, and more — your ultimate destination for Asian entertainment content. Configuration is driven by `contents/site-settings.json`.
 
 ## Features
 
-- News articles, analysis, and feature stories
-- Predefined categories (politics, economy, world, culture, sports, technology, opinion, lifestyle)
+- Articles, reviews, and feature stories about Asian movies and dramas
+- Predefined categories (K-Drama, J-Drama, C-Drama, Thai Drama, Movies, Bollywood, Anime, Reviews, News, Actors & Idols, Lists & Guides, Opinion)
 - SEO-friendly dynamic `sitemap.xml`, `robots.txt`, and meta tags
 - PWA support and automatic icon generation
 - Uses `contents/site-settings.json` for site title, description, categories and contact info
@@ -25,8 +25,8 @@ Bhutan Post is a modern news website delivering in-depth reporting, analysis, an
 1. Clone the repository
 
 ```bash
-git clone https://github.com/BackSuit/BhutanPost.git
-cd PetLifeStore
+git clone https://github.com/BackSuit/AsianReels.git
+cd AsianReels
 ```
 
 2. Install dependencies

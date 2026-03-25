@@ -24,7 +24,7 @@ export default function HeroAuthorCategory({
             textTransform="uppercase"
             letterSpacing="0.08em"
             borderRadius="sm"
-            _hover={{ bg: "#9B2C2C" }}
+            _hover={{ bg: "#C7325A" }}
           >
             {category?.name}
           </Text>

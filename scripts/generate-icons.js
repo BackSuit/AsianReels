@@ -22,13 +22,11 @@ if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true })
 }
 
-// Logo SVG — same mountain-peak geometry as Logo.js's MountainMark
+// Logo SVG — same reel geometry as Logo.js's ReelMark
 const { getMountainMarkSvg } = require("../src/utils/logoSvg")
 
 async function generateIcon(size, outputPath) {
-  // Use the red badge colour from site-settings or fall back to brand.primary
-  const bgColor = siteSettings.logo_bg_color || "#C53030"
-  const svg = getMountainMarkSvg(size, bgColor)
+  const svg = getMountainMarkSvg(size)
 
   // Convert SVG to PNG using sharp
   await sharp(Buffer.from(svg)).resize(size, size).png().toFile(outputPath)

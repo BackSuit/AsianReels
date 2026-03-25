@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
         <link rel="manifest" href="/manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#C53030" />
+        <meta name="theme-color" content="#E53E6B" />
       </Head>
       <Header />
       <Box

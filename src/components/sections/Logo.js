@@ -2,8 +2,8 @@ import { Text, Box, VStack } from "@chakra-ui/layout"
 import { Flex } from "@chakra-ui/react"
 import Link from "next/link"
 
-// Bhutan mountain-peak icon mark — inline SVG, no external img needed
-function MountainMark() {
+// Film-reel inspired icon mark for Asian Reels
+function ReelMark() {
   return (
     <svg
       width="44"
@@ -13,16 +13,25 @@ function MountainMark() {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Red badge background */}
-      <rect width="44" height="44" rx="7" fill="#C53030" />
-      {/* Left (taller) mountain */}
-      <path d="M5 34 L16 9 L27 34Z" fill="rgba(255,255,255,0.88)" />
-      {/* Right (shorter) mountain */}
-      <path d="M22 34 L32 17 L42 34Z" fill="rgba(255,255,255,0.55)" />
-      {/* Snow cap on left peak */}
-      <path d="M16 9 L12.5 16 L19.5 16Z" fill="white" />
-      {/* Snow cap on right peak */}
-      <path d="M32 17 L29.5 22 L34.5 22Z" fill="rgba(255,255,255,0.9)" />
+      {/* Gradient background */}
+      <defs>
+        <linearGradient id="reelGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#E53E6B" />
+          <stop offset="100%" stopColor="#1B1464" />
+        </linearGradient>
+      </defs>
+      <rect width="44" height="44" rx="10" fill="url(#reelGrad)" />
+      {/* Outer reel circle */}
+      <circle cx="22" cy="22" r="14" stroke="white" strokeWidth="2" fill="none" opacity="0.85" />
+      {/* Center hub */}
+      <circle cx="22" cy="22" r="4" fill="white" opacity="0.9" />
+      {/* Sprocket holes */}
+      <circle cx="22" cy="11" r="2.5" fill="white" opacity="0.7" />
+      <circle cx="22" cy="33" r="2.5" fill="white" opacity="0.7" />
+      <circle cx="11" cy="22" r="2.5" fill="white" opacity="0.7" />
+      <circle cx="33" cy="22" r="2.5" fill="white" opacity="0.7" />
+      {/* Play triangle */}
+      <path d="M20 18 L20 26 L27 22Z" fill="white" opacity="0.95" />
     </svg>
   )
 }
@@ -43,31 +52,30 @@ export default function Logo({ isLight = false }) {
       lineHeight={1}
       flexShrink={0}
     >
-      <MountainMark />
+      <ReelMark />
       <VStack spacing={0} align="flex-start">
         <Text
           as="span"
           fontSize={{ base: "lg", md: "xl" }}
-          fontWeight="900"
-          fontFamily="'Montserrat', 'Arial Black', sans-serif"
-          letterSpacing="-0.03em"
-          color={isLight ? "white" : "gray.900"}
+          fontWeight="800"
+          fontFamily="'Raleway', 'Segoe UI', sans-serif"
+          letterSpacing="-0.02em"
+          color={isLight ? "white" : "brand.ink"}
           lineHeight={1}
         >
-          BHUTAN
+          ASIAN
         </Text>
         <Text
           as="span"
           fontSize={{ base: "xs", md: "sm" }}
-          fontWeight="400"
-          fontStyle="italic"
-          fontFamily="'Lora', Georgia, serif"
-          letterSpacing="0.2em"
+          fontWeight="700"
+          fontFamily="'Raleway', 'Segoe UI', sans-serif"
+          letterSpacing="0.18em"
           color={isLight ? "gray.300" : "brand.primary"}
           lineHeight={1.3}
           textTransform="uppercase"
         >
-          Post
+          Reels
         </Text>
       </VStack>
     </Box>

@@ -153,7 +153,7 @@ function FooterForm({
         w="full"
         fontWeight="600"
         isLoading={submitLoading}
-        _hover={{ bg: "#9B2C2C" }}
+        _hover={{ bg: "#C7325A" }}
       >
         Send
       </Button>
@@ -386,7 +386,7 @@ export default function Footer() {
               fontSize={{ base: "xs", lg: "sm" }}
               ml={1}
             >
-              Bhutan Post {new Date().getFullYear()}. All rights reserved.
+              {siteName} {new Date().getFullYear()}. All rights reserved.
             </Text>
           </HStack>
           <HStack color="gray.400" spacing={{ base: 2, md: 3 }} fontSize="sm">

@@ -37,7 +37,7 @@ export function Hero({ article }) {
           bgColor="brand.primary"
           color="white"
           fontSize={textSize}
-          _hover={{ bg: "#9B2C2C" }}
+          _hover={{ bg: "#C7325A" }}
         >
           Read Full Story
         </PrimaryButton>

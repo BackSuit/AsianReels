@@ -1,40 +1,47 @@
 /**
- * Bhutan Post logo SVG generator — shared between generate-icons.js and Logo.js.
+ * Asian Reels logo SVG generator — shared between generate-icons.js and Logo.js.
  *
- * Uses the EXACT same 44x44 viewBox geometry as MountainMark in Logo.js.
+ * Film-reel inspired icon matching the ReelMark in Logo.js.
  * SVG's viewBox attribute handles scaling to any output size automatically.
  *
  * Pure CommonJS — safe to require() in Node.js scripts.
- * fill-opacity attributes used instead of rgba() for maximum SVG renderer compat.
  */
 
-function getMountainMarkSvg(size, bgColor) {
+function getReelMarkSvg(size, bgColor) {
   var s = size || 44
-  var bg = bgColor || "#C53030"
   return (
     '<svg width="' +
     s +
     '" height="' +
     s +
     '" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">\n' +
-    '  <rect width="44" height="44" rx="7" fill="' +
-    bg +
-    '"/>\n' +
-    '  <path d="M5 34 L16 9 L27 34Z" fill="white" fill-opacity="0.88"/>\n' +
-    '  <path d="M22 34 L32 17 L42 34Z" fill="white" fill-opacity="0.55"/>\n' +
-    '  <path d="M16 9 L12.5 16 L19.5 16Z" fill="white"/>\n' +
-    '  <path d="M32 17 L29.5 22 L34.5 22Z" fill="white" fill-opacity="0.9"/>\n' +
+    '  <defs><linearGradient id="reelGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">' +
+    '<stop offset="0%" stop-color="#E53E6B"/><stop offset="100%" stop-color="#1B1464"/>' +
+    "</linearGradient></defs>\n" +
+    '  <rect width="44" height="44" rx="10" fill="url(#reelGrad)"/>\n' +
+    '  <circle cx="22" cy="22" r="14" stroke="white" stroke-width="2" fill="none" opacity="0.85"/>\n' +
+    '  <circle cx="22" cy="22" r="4" fill="white" opacity="0.9"/>\n' +
+    '  <circle cx="22" cy="11" r="2.5" fill="white" opacity="0.7"/>\n' +
+    '  <circle cx="22" cy="33" r="2.5" fill="white" opacity="0.7"/>\n' +
+    '  <circle cx="11" cy="22" r="2.5" fill="white" opacity="0.7"/>\n' +
+    '  <circle cx="33" cy="22" r="2.5" fill="white" opacity="0.7"/>\n' +
+    '  <path d="M20 18 L20 26 L27 22Z" fill="white" opacity="0.95"/>\n' +
     "</svg>"
   )
 }
 
-// generateLogoSvg kept for backward compatibility
+// Keep backward-compatible names
+function getMountainMarkSvg(size, bgColor) {
+  return getReelMarkSvg(size, bgColor)
+}
+
 function generateLogoSvg(opts) {
   var o = opts || {}
-  return getMountainMarkSvg(o.size || 100, o.bgColor || "#C53030")
+  return getReelMarkSvg(o.size || 100, o.bgColor)
 }
 
 module.exports = {
   getMountainMarkSvg: getMountainMarkSvg,
+  getReelMarkSvg: getReelMarkSvg,
   generateLogoSvg: generateLogoSvg,
 }

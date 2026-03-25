@@ -2,53 +2,53 @@ import { extendTheme, theme as chakraTheme } from "@chakra-ui/react"
 
 const theme = extendTheme({
   fonts: {
-    heading: "'Playfair Display', Georgia, serif",
-    body: "'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif",
+    heading: "'Raleway', 'Segoe UI', sans-serif",
+    body: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
     serif: "'Playfair Display', Georgia, serif",
     mono: "'JetBrains Mono', 'Fira Code', monospace",
   },
   colors: {
     brand: {
-      // Modern news website palette
-      primary: "#C53030", // Bold red - breaking news accent
-      secondary: "#1A365D", // Deep navy - authority & trust
-      accent: "#DD6B20", // Warm orange - call-to-action
-      cream: "#FFFFFF", // Clean white - modern look
-      parchment: "#F7FAFC", // Light gray - section backgrounds
-      ink: "#1A202C", // Near black - crisp text
-      gray: "#718096",
-      lightGray: "#A0AEC0",
+      // Asian entertainment platform palette
+      primary: "#E53E6B", // Vibrant rose-pink — K-drama energy
+      secondary: "#1B1464", // Deep indigo — cinematic depth
+      accent: "#F6AD55", // Warm gold — premium highlight
+      cream: "#FFFFFF", // Clean white
+      parchment: "#F8F6FF", // Soft lavender-tint background
+      ink: "#1A1035", // Deep violet-black text
+      gray: "#6B7280",
+      lightGray: "#9CA3AF",
     },
   },
   breakpoints: {
-    sm: "30em", // small phone
-    md: "48em", // ipad
-    lg: "62em", // ipad pro
-    xl: "80em", // laptop
-    xxl: "96em", // pc
+    sm: "30em",
+    md: "48em",
+    lg: "62em",
+    xl: "80em",
+    xxl: "96em",
   },
   components: {
     Button: {
       baseStyle: {
         fontWeight: "600",
-        borderRadius: "sm",
+        borderRadius: "md",
       },
       variants: {
         primary: {
           bg: "brand.primary",
           color: "white",
-          _hover: { bg: "#9B2C2C", transform: "translateY(-1px)" },
+          _hover: { bg: "#C7325A", transform: "translateY(-1px)" },
         },
         outline: {
           borderColor: "brand.primary",
           color: "brand.primary",
-          _hover: { bg: "red.50" },
+          _hover: { bg: "pink.50" },
         },
       },
     },
     Heading: {
       baseStyle: {
-        fontFamily: "'Playfair Display', Georgia, serif",
+        fontFamily: "'Raleway', 'Segoe UI', sans-serif",
         fontWeight: "700",
         color: "brand.ink",
       },
@@ -70,13 +70,13 @@ const theme = extendTheme({
     global: {
       "::selection": {
         color: "white",
-        background: "#C53030",
+        background: "#E53E6B",
       },
       "::-webkit-scrollbar": {
         width: "0.5em",
       },
       "::-webkit-scrollbar-track": {
-        background: "#F7FAFC",
+        background: "#F8F6FF",
       },
       "::-webkit-scrollbar-thumb": {
         transition: "150ms all ease-in-out",
@@ -92,23 +92,23 @@ const theme = extendTheme({
       "html, body": {
         overflowX: "hidden",
         backgroundColor: "#FFFFFF",
-        color: "#1A202C",
+        color: "#1A1035",
         fontSize: "16px",
         lineHeight: "1.7",
       },
       ".booxtore-logo": {
-        fontFamily: "'Playfair Display', Georgia, serif",
+        fontFamily: "'Raleway', 'Segoe UI', sans-serif",
       },
       ".markdown": {
         "div.end-p": {
           marginBottom: 4,
         },
         a: {
-          color: "#C53030",
+          color: "#E53E6B",
           fontWeight: "500",
           _hover: {
             textDecoration: "underline",
-            color: "#9B2C2C",
+            color: "#C7325A",
           },
         },
         p: {
@@ -116,16 +116,16 @@ const theme = extendTheme({
           marginY: 6,
           fontSize: "1.1rem",
           color: "#2D3748",
-          fontFamily: "'Lora', Georgia, serif",
+          fontFamily: "'Inter', sans-serif",
         },
         "h1, h2, h3, h4, h5, h6": {
-          fontFamily: "'Playfair Display', Georgia, serif",
+          fontFamily: "'Raleway', 'Segoe UI', sans-serif",
           fontWeight: 700,
           marginTop: 8,
           marginBottom: 4,
           textOverflow: "ellipsis",
           lineHeight: "1.3",
-          color: "#1A202C",
+          color: "#1A1035",
         },
         h1: {
           fontSize: "4xl",
@@ -152,7 +152,7 @@ const theme = extendTheme({
           pos: "relative",
           fontStyle: "italic",
           color: "#4A5568",
-          bg: "#F7FAFC",
+          bg: "#F8F6FF",
           borderRadius: "md",
           _before: {
             content: "''",
@@ -162,7 +162,7 @@ const theme = extendTheme({
             left: 0,
             bottom: 0,
             width: "4px",
-            bgColor: "#C53030",
+            bgColor: "#E53E6B",
             borderRadius: "full",
           },
         },
@@ -173,11 +173,11 @@ const theme = extendTheme({
           borderRadius: "md",
           overflow: "hidden",
           thead: {
-            background: "#F7FAFC",
+            background: "#F8F6FF",
           },
           th: {
             fontWeight: 600,
-            color: "#1A202C",
+            color: "#1A1035",
           },
           "th, td": {
             padding: "0.75em 1em",
@@ -199,7 +199,7 @@ const theme = extendTheme({
         pointerEvents: "none",
       },
       "#nprogress .bar": {
-        background: "#C53030",
+        background: "linear-gradient(90deg, #E53E6B, #F6AD55)",
         pos: "fixed",
         zIndex: 99999,
         top: 0,

@@ -92,7 +92,7 @@ export default function StockTicker() {
           textTransform="uppercase"
           whiteSpace="nowrap"
         >
-          RSEBL
+          TRENDING
         </Text>
       </Box>
 

@@ -95,7 +95,7 @@ export default function FeaturedArticle({ article, reverse, btnColor }) {
                 bgColor="brand.primary"
                 fontSize={textSize}
                 color="white"
-                _hover={{ bg: "#9B2C2C" }}
+                _hover={{ bg: "#C7325A" }}
               >
                 Read Full Story
               </PrimaryButton>

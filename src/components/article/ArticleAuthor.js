@@ -9,7 +9,7 @@ export default function ArticleAuthor({ authors }) {
       href={AUTHOR_ID_ROUTE(author?.slug)}
       color="brand.primary"
       transitionDuration="150ms"
-      _hover={{ color: "#9B2C2C" }}
+      _hover={{ color: "#C7325A" }}
       key={author._id}
       itemProp="author"
       fontWeight="500"

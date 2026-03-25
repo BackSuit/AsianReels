@@ -1,0 +1,50 @@
+import React from "react"
+import { useBreakpointValue, VStack } from "@chakra-ui/react"
+import { ArrowForwardIcon } from "@chakra-ui/icons"
+
+import HeroTitle from "./HeroTitle"
+import HeroImage from "./HeroImage"
+import HeroLayout from "./HeroLayout"
+import HeroExcerpt from "./HeroExcerpt"
+import HeroAuthorCategory from "./HeroAuthorCategory"
+import PrimaryButton from "@/components/buttons/PrimaryButton"
+import { ARTICLE_ID_ROUTE } from "src/constanst/routes"
+
+export function Hero({ article }) {
+  const url = article?.image_url
+  const textSize = useBreakpointValue({ base: "sm", lg: "md" })
+
+  return (
+    <HeroLayout>
+      <VStack
+        spacing={{ base: 2, md: 4 }}
+        flex={1}
+        pl={{ base: 0, xl: 8 }}
+        py={{ base: 8, lg: 10, xl: 20 }}
+        bgColor="white"
+        justifyContent="center"
+      >
+        <HeroAuthorCategory
+          authors={article?.authors}
+          category={article?.category}
+          textSize={textSize}
+        />
+        <HeroTitle title={article?.title} />
+        <HeroExcerpt excerpt={article?.excerpt} textSize={textSize} />
+        <PrimaryButton
+          href={ARTICLE_ID_ROUTE(article?.slug)}
+          rightIcon={<ArrowForwardIcon />}
+          bgColor="brand.primary"
+          color="white"
+          fontSize={textSize}
+          _hover={{ bg: "#9B2C2C" }}
+        >
+          Read Full Story
+        </PrimaryButton>
+      </VStack>
+      <HeroImage alt={article?.title} url={url} />
+    </HeroLayout>
+  )
+}
+
+export default Hero

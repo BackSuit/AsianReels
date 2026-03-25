@@ -1,0 +1,175 @@
+{
+  "site_name": "Bhutan Post",
+  "site_title": "Bhutan Post",
+  "logo_text": "Bhutan Post",
+  "tagline": "Your Trusted Source for Bhutan News & Stories",
+  "instagram_account": "",
+  "twitter_account": "",
+  "github": "BackSuit/BhutanPost",
+  "facebook_account": "profile.php?id=61578511603483",
+  "whatsapp": "+9779840889975",
+  "base_url": "https://bhutanpost.com",
+  "site_keywords": [
+    {
+      "keyword": "Bhutan news"
+    },
+    {
+      "keyword": "Bhutan latest news"
+    },
+    {
+      "keyword": "Bhutan politics"
+    },
+    {
+      "keyword": "Bhutan economy"
+    },
+    {
+      "keyword": "Bhutan culture"
+    },
+    {
+      "keyword": "Bhutan tourism"
+    },
+    {
+      "keyword": "Bhutan technology"
+    },
+    {
+      "keyword": "Bhutan sports"
+    },
+    {
+      "keyword": "Bhutan opinion"
+    },
+    {
+      "keyword": "Bhutan lifestyle"
+    },
+    {
+      "keyword": "South Asia news"
+    },
+    {
+      "keyword": "BhutanPost"
+    }
+  ],
+  "site_description": "Bhutan Post is your trusted source for the latest news, in-depth analysis, and stories from Bhutan and beyond. Covering politics, economy, culture, sports, technology, and lifestyle — delivering quality journalism to keep you informed.",
+  "seo_meta_title": "Bhutan Post - Latest News, Analysis & Stories from Bhutan",
+  "seo_meta_description": "Stay informed with Bhutan Post. Breaking news, in-depth analysis, opinion pieces, and feature stories covering politics, economy, culture, sports, and lifestyle from Bhutan and South Asia.",
+  "seo_meta_keywords": "Bhutan news, Bhutan politics, Bhutan economy, Bhutan culture, Bhutan tourism, South Asia news, Bhutan sports, Bhutan technology",
+  "contact_address": "Thimphu, Bhutan",
+  "contact_phonenumber": "+975 2 321 456",
+  "contact_email": "editor@bhutanpost.com",
+  "posts_per_page": 12,
+  "use_api_categories": false,
+  "predefined_categories": [
+    {
+      "slug": "news",
+      "name": "News",
+      "description": "Latest news and updates from Bhutan and around the world"
+    },
+    {
+      "slug": "politics",
+      "name": "Politics",
+      "description": "Government updates, policy changes, and political analysis"
+    },
+    {
+      "slug": "economy",
+      "name": "Economy",
+      "description": "Economic news, business updates, and market analysis"
+    },
+    {
+      "slug": "world",
+      "name": "World",
+      "description": "International news and global affairs"
+    },
+    {
+      "slug": "culture",
+      "name": "Culture",
+      "description": "Arts, traditions, festivals, and cultural heritage"
+    },
+    {
+      "slug": "sports",
+      "name": "Sports",
+      "description": "Sports news, events, and athlete features"
+    },
+    {
+      "slug": "technology",
+      "name": "Technology",
+      "description": "Tech news, innovation, and digital transformation"
+    },
+    {
+      "slug": "opinion",
+      "name": "Opinion",
+      "description": "Editorials, op-eds, and expert commentary"
+    },
+    {
+      "slug": "lifestyle",
+      "name": "Lifestyle",
+      "description": "Health, wellness, travel, food, and everyday living"
+    },
+    {
+      "slug": "education",
+      "name": "Education",
+      "description": "Education news, academic updates, and learning resources"
+    },
+    {
+      "slug": "environment",
+      "name": "Environment",
+      "description": "Environmental news, conservation, and sustainability"
+    },
+    {
+      "slug": "tourism",
+      "name": "Tourism",
+      "description": "Travel guides, destination features, and tourism news"
+    },
+    {
+      "slug": "health",
+      "name": "Health",
+      "description": "Public health, medical news, and wellness updates"
+    }
+  ],
+  "navbar_groups": [
+    {
+      "label": "News",
+      "slug": "news"
+    },
+    {
+      "label": "Politics",
+      "slug": "politics"
+    },
+    {
+      "label": "Economy",
+      "slug": "economy"
+    },
+    {
+      "label": "World",
+      "slug": "world"
+    },
+    {
+      "label": "Culture",
+      "slug": "culture"
+    },
+    {
+      "label": "Sports",
+      "slug": "sports"
+    },
+    {
+      "label": "Opinion",
+      "slug": "opinion"
+    },
+    {
+      "label": "More",
+      "items": [
+        "technology",
+        "lifestyle",
+        "education",
+        "environment",
+        "tourism",
+        "health"
+      ]
+    }
+  ],
+  "featured_categories": [
+    "politics",
+    "economy",
+    "world",
+    "culture"
+  ],
+  "podcast_cover_url": "https://res.cloudinary.com/yacloud/image/upload/v1614332851/ya-pod_gi1tmm.jpg",
+  "mood_cover_url": "/images/mood/v5/mood-v5-cover.jpg"
+}

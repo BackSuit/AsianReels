@@ -7,9 +7,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  Button,
   HStack,
-  Text,
 } from "@chakra-ui/react"
 import { HiX as CloseIcon, HiMenu as MenuIcon, HiSearch } from "react-icons/hi"
 import { useRouter } from "next/router"
@@ -18,7 +16,6 @@ import Logo from "./Logo"
 import MobileNavbar from "./MobileNavbar"
 import NavDropdown from "./NavDropdown"
 import AuthButton from "../auth/AuthButton"
-import StockTicker from "./StockTicker"
 
 function SearchBar() {
   const router = useRouter()
@@ -62,64 +59,11 @@ function SearchBar() {
   )
 }
 
-function DateBar() {
-  const today = new Date()
-  const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }
-  const dateStr = today.toLocaleDateString("en-US", options)
-
-  return (
-    <Box
-      w="100%"
-      bg="brand.secondary"
-      color="white"
-      py={1}
-      px={{ base: 4, md: 8, lg: 12 }}
-      fontSize="xs"
-      display={{ base: "none", md: "block" }}
-    >
-      <Flex justify="space-between" align="center" maxW="1600px" mx="auto">
-        <Text fontWeight="500" letterSpacing="0.02em">
-          {dateStr}
-        </Text>
-        <HStack spacing={4}>
-          <Text
-            as="a"
-            href="/about-us"
-            _hover={{ textDecoration: "underline" }}
-            cursor="pointer"
-          >
-            About
-          </Text>
-          <Text
-            as="a"
-            href="/privacy-policy"
-            _hover={{ textDecoration: "underline" }}
-            cursor="pointer"
-          >
-            Privacy
-          </Text>
-        </HStack>
-      </Flex>
-    </Box>
-  )
-}
-
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <Box pos="fixed" top={0} left={0} right={0} zIndex="10" id="header-nav">
-      {/* Top date bar */}
-      <DateBar />
-
-      {/* RSEBL Stock market ticker */}
-      <StockTicker />
-
       {/* Main header */}
       <Flex
         as="nav"

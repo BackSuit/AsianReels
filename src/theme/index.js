@@ -2,22 +2,21 @@ import { extendTheme, theme as chakraTheme } from "@chakra-ui/react"
 
 const theme = extendTheme({
   fonts: {
-    heading: "'Raleway', 'Segoe UI', sans-serif",
+    heading: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
     body: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
     serif: "'Playfair Display', Georgia, serif",
     mono: "'JetBrains Mono', 'Fira Code', monospace",
   },
   colors: {
     brand: {
-      // Asian entertainment platform palette
-      primary: "#E53E6B", // Vibrant rose-pink — K-drama energy
-      secondary: "#1B1464", // Deep indigo — cinematic depth
-      accent: "#F6AD55", // Warm gold — premium highlight
-      cream: "#FFFFFF", // Clean white
-      parchment: "#F8F6FF", // Soft lavender-tint background
-      ink: "#1A1035", // Deep violet-black text
-      gray: "#6B7280",
-      lightGray: "#9CA3AF",
+      primary: "#6366F1", // Modern indigo
+      secondary: "#4F46E5", // Deep indigo
+      accent: "#F59E0B", // Warm amber
+      cream: "#FFFFFF",
+      parchment: "#F8FAFC", // Very light cool gray
+      ink: "#1E293B", // Slate-800
+      gray: "#64748B", // Slate-500
+      lightGray: "#94A3B8", // Slate-400
     },
   },
   breakpoints: {
@@ -37,18 +36,18 @@ const theme = extendTheme({
         primary: {
           bg: "brand.primary",
           color: "white",
-          _hover: { bg: "#C7325A", transform: "translateY(-1px)" },
+          _hover: { bg: "#4F46E5", transform: "translateY(-1px)" },
         },
         outline: {
           borderColor: "brand.primary",
           color: "brand.primary",
-          _hover: { bg: "pink.50" },
+          _hover: { bg: "indigo.50" },
         },
       },
     },
     Heading: {
       baseStyle: {
-        fontFamily: "'Raleway', 'Segoe UI', sans-serif",
+        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
         fontWeight: "700",
         color: "brand.ink",
       },
@@ -70,13 +69,13 @@ const theme = extendTheme({
     global: {
       "::selection": {
         color: "white",
-        background: "#E53E6B",
+        background: "#6366F1",
       },
       "::-webkit-scrollbar": {
         width: "0.5em",
       },
       "::-webkit-scrollbar-track": {
-        background: "#F8F6FF",
+        background: "#F8FAFC",
       },
       "::-webkit-scrollbar-thumb": {
         transition: "150ms all ease-in-out",
@@ -92,23 +91,23 @@ const theme = extendTheme({
       "html, body": {
         overflowX: "hidden",
         backgroundColor: "#FFFFFF",
-        color: "#1A1035",
+        color: "#1E293B",
         fontSize: "16px",
         lineHeight: "1.7",
       },
       ".booxtore-logo": {
-        fontFamily: "'Raleway', 'Segoe UI', sans-serif",
+        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
       },
       ".markdown": {
         "div.end-p": {
           marginBottom: 4,
         },
         a: {
-          color: "#E53E6B",
+          color: "#6366F1",
           fontWeight: "500",
           _hover: {
             textDecoration: "underline",
-            color: "#C7325A",
+            color: "#4F46E5",
           },
         },
         p: {
@@ -119,13 +118,13 @@ const theme = extendTheme({
           fontFamily: "'Inter', sans-serif",
         },
         "h1, h2, h3, h4, h5, h6": {
-          fontFamily: "'Raleway', 'Segoe UI', sans-serif",
+          fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
           fontWeight: 700,
           marginTop: 8,
           marginBottom: 4,
           textOverflow: "ellipsis",
           lineHeight: "1.3",
-          color: "#1A1035",
+          color: "#1E293B",
         },
         h1: {
           fontSize: "4xl",
@@ -152,7 +151,7 @@ const theme = extendTheme({
           pos: "relative",
           fontStyle: "italic",
           color: "#4A5568",
-          bg: "#F8F6FF",
+          bg: "#F8FAFC",
           borderRadius: "md",
           _before: {
             content: "''",
@@ -162,7 +161,7 @@ const theme = extendTheme({
             left: 0,
             bottom: 0,
             width: "4px",
-            bgColor: "#E53E6B",
+            bgColor: "#6366F1",
             borderRadius: "full",
           },
         },
@@ -173,11 +172,11 @@ const theme = extendTheme({
           borderRadius: "md",
           overflow: "hidden",
           thead: {
-            background: "#F8F6FF",
+            background: "#F8FAFC",
           },
           th: {
             fontWeight: 600,
-            color: "#1A1035",
+            color: "#1E293B",
           },
           "th, td": {
             padding: "0.75em 1em",
@@ -199,7 +198,7 @@ const theme = extendTheme({
         pointerEvents: "none",
       },
       "#nprogress .bar": {
-        background: "linear-gradient(90deg, #E53E6B, #F6AD55)",
+        background: "linear-gradient(90deg, #818CF8, #6366F1)",
         pos: "fixed",
         zIndex: 99999,
         top: 0,

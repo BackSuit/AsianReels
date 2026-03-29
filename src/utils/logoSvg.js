@@ -8,24 +8,22 @@
  */
 
 function getReelMarkSvg(size, bgColor) {
-  var s = size || 44
+  var s = size || 38
   return (
     '<svg width="' +
     s +
     '" height="' +
     s +
-    '" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">\n' +
-    '  <defs><linearGradient id="reelGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">' +
-    '<stop offset="0%" stop-color="#E53E6B"/><stop offset="100%" stop-color="#1B1464"/>' +
+    '" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">\n' +
+    '  <defs><linearGradient id="reelGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">' +
+    '<stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#4F46E5"/>' +
     "</linearGradient></defs>\n" +
-    '  <rect width="44" height="44" rx="10" fill="url(#reelGrad)"/>\n' +
-    '  <circle cx="22" cy="22" r="14" stroke="white" stroke-width="2" fill="none" opacity="0.85"/>\n' +
-    '  <circle cx="22" cy="22" r="4" fill="white" opacity="0.9"/>\n' +
-    '  <circle cx="22" cy="11" r="2.5" fill="white" opacity="0.7"/>\n' +
-    '  <circle cx="22" cy="33" r="2.5" fill="white" opacity="0.7"/>\n' +
-    '  <circle cx="11" cy="22" r="2.5" fill="white" opacity="0.7"/>\n' +
-    '  <circle cx="33" cy="22" r="2.5" fill="white" opacity="0.7"/>\n' +
-    '  <path d="M20 18 L20 26 L27 22Z" fill="white" opacity="0.95"/>\n' +
+    '  <rect width="38" height="38" rx="10" fill="url(#reelGrad)"/>\n' +
+    '  <rect x="3" y="8" width="3" height="3" rx="0.75" fill="white" opacity="0.35"/>\n' +
+    '  <rect x="3" y="14" width="3" height="3" rx="0.75" fill="white" opacity="0.35"/>\n' +
+    '  <rect x="3" y="20" width="3" height="3" rx="0.75" fill="white" opacity="0.35"/>\n' +
+    '  <rect x="3" y="26" width="3" height="3" rx="0.75" fill="white" opacity="0.35"/>\n' +
+    '  <path d="M16 12 L16 26 L27 19Z" fill="white" opacity="0.95"/>\n' +
     "</svg>"
   )
 }

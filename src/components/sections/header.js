@@ -50,7 +50,7 @@ function SearchBar() {
           _placeholder={{ color: "gray.400" }}
           _focus={{
             borderColor: "brand.primary",
-            boxShadow: "0 0 0 1px #E53E6B",
+            boxShadow: "0 0 0 1px #6366F1",
             bg: "white",
           }}
         />

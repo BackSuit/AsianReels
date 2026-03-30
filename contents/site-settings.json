@@ -20,13 +20,12 @@
     { "keyword": "drama reviews" },
     { "keyword": "Asian entertainment" },
     { "keyword": "Bollywood" },
-    { "keyword": "anime movies" },
     { "keyword": "Asian Reels" }
   ],
   "site_description": "Asian Reels is your ultimate destination for articles, reviews, and news about Asian movies and dramas. From K-dramas and J-dramas to Bollywood blockbusters and C-dramas — discover the best of Asian entertainment.",
   "seo_meta_title": "Asian Reels - Asian Movie & Drama Reviews, News & Articles",
   "seo_meta_description": "Discover the best of Asian entertainment on Asian Reels. In-depth reviews, latest news, actor spotlights, and curated lists covering Korean, Japanese, Chinese, Thai dramas and movies.",
-  "seo_meta_keywords": "Asian dramas, Korean dramas, K-drama, J-drama, C-drama, Thai drama, Asian movies, Bollywood, anime movies, drama reviews, Asian entertainment",
+  "seo_meta_keywords": "Asian dramas, Korean dramas, K-drama, J-drama, C-drama, Thai drama, Asian movies, Bollywood, drama reviews, Asian entertainment",
   "contact_address": "",
   "contact_phonenumber": "",
   "contact_email": "hello@asianreels.com",
@@ -34,17 +33,17 @@
   "use_api_categories": false,
   "predefined_categories": [
     {
-      "slug": "kdrama",
+      "slug": "k-drama",
       "name": "K-Drama",
       "description": "Reviews, recaps, and news about Korean dramas"
     },
     {
-      "slug": "jdrama",
+      "slug": "j-drama",
       "name": "J-Drama",
       "description": "Coverage of Japanese dramas and live-action series"
     },
     {
-      "slug": "cdrama",
+      "slug": "c-drama",
       "name": "C-Drama",
       "description": "Chinese drama reviews, recommendations, and updates"
     },
@@ -62,49 +61,15 @@
       "slug": "bollywood",
       "name": "Bollywood",
       "description": "Bollywood movie reviews, celebrity news, and industry updates"
-    },
-    {
-      "slug": "anime",
-      "name": "Anime",
-      "description": "Anime movie and series reviews, seasonal guides, and news"
-    },
-    {
-      "slug": "reviews",
-      "name": "Reviews",
-      "description": "In-depth reviews and ratings of Asian movies and dramas"
-    },
-    {
-      "slug": "news",
-      "name": "News",
-      "description": "Latest entertainment news, casting announcements, and industry updates"
-    },
-    {
-      "slug": "actors",
-      "name": "Actors & Idols",
-      "description": "Profiles, interviews, and spotlights on Asian actors and idols"
-    },
-    {
-      "slug": "lists",
-      "name": "Lists & Guides",
-      "description": "Curated watchlists, top picks, and recommendation guides"
-    },
-    {
-      "slug": "opinion",
-      "name": "Opinion",
-      "description": "Editorials, fan theories, and opinion pieces on Asian entertainment"
     }
   ],
   "navbar_groups": [
     {
-      "label": "News",
-      "slug": "news"
-    },
-    {
       "label": "Dramas",
       "items": [
-        "kdrama",
-        "jdrama",
-        "cdrama",
+        "k-drama",
+        "j-drama",
+        "c-drama",
         "thai-drama"
       ]
     },
@@ -115,29 +80,13 @@
     {
       "label": "Bollywood",
       "slug": "bollywood"
-    },
-    {
-      "label": "Anime",
-      "slug": "anime"
-    },
-    {
-      "label": "Reviews",
-      "slug": "reviews"
-    },
-    {
-      "label": "More",
-      "items": [
-        "actors",
-        "lists",
-        "opinion"
-      ]
     }
+
   ],
   "featured_categories": [
-    "kdrama",
+    "k-drama",
     "movies",
-    "bollywood",
-    "anime"
+    "bollywood"
   ],
   "podcast_cover_url": "https://res.cloudinary.com/yacloud/image/upload/v1614332851/ya-pod_gi1tmm.jpg",
   "mood_cover_url": "/images/mood/v5/mood-v5-cover.jpg"

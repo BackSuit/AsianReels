@@ -61,7 +61,9 @@ export async function fetchAPI(path, options = {}) {
 function normalizeArticle(article) {
   return {
     ...article,
-    image_url: article.image || article.image_url,
+    // Ensure `image_url` is JSON-serializable for Next.js getStaticProps
+    // If neither `image` nor `image_url` exist, set to null (not undefined)
+    image_url: article.image || article.image_url || null,
     category:
       typeof article.category === "string"
         ? {

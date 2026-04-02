@@ -242,6 +242,17 @@ export async function countArticles() {
   return data.total || 0
 }
 
+export async function countArticlesByCategory(slug) {
+  if (!slug) return 0
+  const queryParams = new URLSearchParams({
+    status: "published",
+    category_slug: slug,
+    limit: "1",
+  })
+  const data = await fetchAPI(`/api/v1/articles?${queryParams}`)
+  return data.total || 0
+}
+
 // Category Endpoints
 export async function fetchCategories() {
   // Check if we should use API categories or predefined ones

@@ -61,6 +61,11 @@
       "slug": "bollywood",
       "name": "Bollywood",
       "description": "Bollywood movie reviews, celebrity news, and industry updates"
+    },
+    {
+      "slug": "celeb",
+      "name": "Celeb",
+      "description": "In-depth profiles and interviews with Asian actors and actresses"
     }
   ],
   "navbar_groups": [
@@ -80,13 +85,17 @@
     {
       "label": "Bollywood",
       "slug": "bollywood"
+    },
+    {
+      "label": "Celeb",
+      "slug": "celeb"
     }
 
   ],
   "featured_categories": [
     "k-drama",
-    "movies",
-    "bollywood"
+    "bollywood",
+    "celeb"
   ],
   "podcast_cover_url": "https://res.cloudinary.com/yacloud/image/upload/v1614332851/ya-pod_gi1tmm.jpg",
   "mood_cover_url": "/images/mood/v5/mood-v5-cover.jpg"

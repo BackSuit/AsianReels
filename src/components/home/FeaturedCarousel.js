@@ -10,7 +10,7 @@ import {
   Badge,
   IconButton,
 } from "@chakra-ui/react"
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons"
+import { ChevronLeftIcon, ChevronRightIcon } from "@/components/icons"
 import { ARTICLE_ID_ROUTE } from "src/constanst/routes"
 import { formatDate } from "@/libs/date"
 

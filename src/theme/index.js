@@ -1,6 +1,10 @@
-import { extendTheme, theme as chakraTheme } from "@chakra-ui/react"
+import { extendTheme } from "@chakra-ui/react"
 
 const theme = extendTheme({
+  config: {
+    initialColorMode: "light",
+    useSystemColorMode: false,
+  },
   fonts: {
     heading: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
     body: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
@@ -86,7 +90,7 @@ const theme = extendTheme({
         background: "#A0AEC0",
       },
       html: {
-        scrollBehavour: "smooth",
+        scrollBehavior: "smooth",
       },
       "html, body": {
         overflowX: "hidden",

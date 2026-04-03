@@ -57,6 +57,8 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ["image/avif", "image/webp"],
+    // All quality values used across Image components
+    qualities: [30, 40, 50, 60, 70, 75, 80],
     // Set to 1 year (31,536,000 seconds) to save your quota
     minimumCacheTTL: 31536000,
     dangerouslyAllowSVG: true,
@@ -65,6 +67,16 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   turbopack: {},
+  experimental: {
+    optimizePackageImports: [
+      "@chakra-ui/react",
+      "@chakra-ui/icons",
+      "framer-motion",
+      "react-icons",
+      "date-fns",
+      "react-share",
+    ],
+  },
 }
 
 module.exports = withPWA(nextConfig)

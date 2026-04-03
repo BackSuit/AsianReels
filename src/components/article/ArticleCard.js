@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ChevronRightIcon } from "@chakra-ui/icons"
+import { HiChevronRight as ChevronRightIcon } from "@/components/icons"
 import {
   Box,
   Flex,

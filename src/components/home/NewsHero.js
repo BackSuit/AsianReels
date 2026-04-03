@@ -7,7 +7,6 @@ import {
   Text,
   VStack,
   HStack,
-  Skeleton,
   Badge,
 } from "@chakra-ui/react"
 import { ARTICLE_ID_ROUTE, CATEGORY_ID_ROUTE } from "src/constanst/routes"

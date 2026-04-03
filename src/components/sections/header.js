@@ -9,13 +9,19 @@ import {
   InputLeftElement,
   HStack,
 } from "@chakra-ui/react"
-import { HiX as CloseIcon, HiMenu as MenuIcon, HiSearch } from "react-icons/hi"
+import {
+  HiX as CloseIcon,
+  HiMenu as MenuIcon,
+  HiSearch,
+} from "@/components/icons"
 import { useRouter } from "next/router"
 import { useState } from "react"
+import dynamic from "next/dynamic"
 import Logo from "./Logo"
-import MobileNavbar from "./MobileNavbar"
 import NavDropdown from "./NavDropdown"
-import AuthButton from "../auth/AuthButton"
+
+const MobileNavbar = dynamic(() => import("./MobileNavbar"), { ssr: false })
+const AuthButton = dynamic(() => import("../auth/AuthButton"), { ssr: false })
 
 function SearchBar() {
   const router = useRouter()

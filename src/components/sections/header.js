@@ -37,7 +37,7 @@ function SearchBar() {
     >
       <InputGroup size="sm" w="220px">
         <InputLeftElement pointerEvents="none">
-          <Icon as={HiSearch} color="gray.400" />
+          <Icon as={HiSearch} color="gray.500" />
         </InputLeftElement>
         <Input
           placeholder="Search dramas & movies..."

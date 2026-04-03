@@ -78,7 +78,7 @@ const theme = extendTheme({
         background: "#F8FAFC",
       },
       "::-webkit-scrollbar-thumb": {
-        transition: "150ms all ease-in-out",
+        transition: "150ms background ease-in-out",
         bgColor: "#CBD5E0",
         borderRadius: "full",
       },

@@ -99,6 +99,8 @@ function NavDropdownGroup({ group }) {
     <Menu isLazy>
       <MenuButton
         as={Box}
+        role="button"
+        aria-haspopup="menu"
         cursor="pointer"
         px={3}
         py={2}

@@ -247,20 +247,37 @@ export async function fetchArticle(slug) {
       return normalizeArticle(fullArticle.article)
     }
 
-    // Fall back to listing articles — slug may not match search keywords
-    const queryParams = new URLSearchParams({
-      status: "published",
-      limit: "1000",
-      sort: "date",
-      order: "desc",
-    })
+    // Fall back to listing articles — paginate until found or exhausted
+    let offset = 0
+    const limit = 1000
 
-    const data = await fetchAPI(`/api/v1/articles?${queryParams}`)
-    const article = data.articles?.find(a => a.slug === slug)
+    while (true) {
+      const queryParams = new URLSearchParams({
+        status: "published",
+        limit: limit.toString(),
+        offset: offset.toString(),
+        sort: "date",
+        order: "desc",
+      })
 
-    if (article) {
-      const fullArticle = await fetchAPI(`/api/v1/articles/${article.id}`)
-      return normalizeArticle(fullArticle.article)
+      const data = await fetchAPI(`/api/v1/articles?${queryParams}`)
+      
+      if (!data.articles || data.articles.length === 0) {
+        break
+      }
+      
+      const article = data.articles.find(a => a.slug === slug)
+
+      if (article) {
+        const fullArticle = await fetchAPI(`/api/v1/articles/${article.id}`)
+        return normalizeArticle(fullArticle.article)
+      }
+      
+      if (data.articles.length < limit) {
+        break
+      }
+      
+      offset += limit
     }
 
     return null

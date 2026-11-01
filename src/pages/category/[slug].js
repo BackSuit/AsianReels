@@ -2,7 +2,7 @@ import Layout from "@/components/layout"
 import ArticleList from "@/components/article/ArticleList"
 import Meta from "@/components/meta"
 import {
-  fetchByCategory,
+  getCategoryBySlug,
   fetchCategorySlug,
   countArticlesByCategory,
   fetchPaginated,
@@ -31,7 +31,7 @@ export async function getStaticProps({ params }) {
   const postsPerPage = config.posts_per_page || 9
 
   try {
-    const { category } = await fetchByCategory(params.slug)
+    const category = await getCategoryBySlug(params.slug)
 
     // If category doesn't exist, return 404
     if (!category) {

@@ -57,7 +57,10 @@ export async function getStaticPaths() {
   try {
     const postsPerPage = config.posts_per_page || 9
     const count = await countArticles()
-    const pages = Math.max(1, Math.ceil(count / postsPerPage))
+    const totalPages = Math.max(1, Math.ceil(count / postsPerPage))
+    // Pre-render only up to page 3 at build time; deeper pages generated on-demand via fallback: "blocking"
+    const MAX_BUILD_PAGES = 3
+    const pages = Math.min(totalPages, MAX_BUILD_PAGES)
     const paths =
       pages > 1
         ? Array.from(Array(pages - 1).keys()).map(it => ({

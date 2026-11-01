@@ -217,7 +217,8 @@ export async function getStaticProps({ params }) {
   if (article.category?.slug) {
     try {
       const { articles: catArticles } = await fetchByCategory(
-        article.category.slug
+        article.category.slug,
+        5
       )
       // Exclude the current article
       relatedArticles = (catArticles || [])

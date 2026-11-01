@@ -64,7 +64,9 @@ export async function fetchAPI(path, options = {}) {
       const isRetryable = !error.status || error.status >= 500
 
       if (isLastAttempt || !isRetryable) {
-        console.error("API Error:", error.message)
+        if (error.status !== 404) {
+          console.error("API Error:", error.message)
+        }
         throw error
       }
 
@@ -173,13 +175,12 @@ export async function fetchHero() {
   }
 }
 
-export async function fetchByCategory(slug) {
+export async function fetchByCategory(slug, limit = 10) {
   if (!slug) return { articles: [], category: null }
 
   try {
     // Get the category metadata
-    const categories = await fetchCategories()
-    const category = categories.find(cat => cat.slug === slug)
+    const category = await getCategoryBySlug(slug)
 
     if (!category) return { articles: [], category: null }
 
@@ -187,6 +188,7 @@ export async function fetchByCategory(slug) {
     const queryParams = new URLSearchParams({
       category_slug: slug,
       status: "published",
+      limit: limit.toString(),
       sort: "date",
       order: "desc",
     })
@@ -233,39 +235,15 @@ export async function fetchArticle(slug) {
   if (!slug) return null
 
   try {
-    // Try the search endpoint first — fetches ~50 records instead of 1000
-    const searchData = await fetchAPI(
-      `/api/v1/articles/search?q=${encodeURIComponent(
-        slug.replace(/-/g, " ")
-      )}&limit=50&status=published`
-    ).catch(() => ({ articles: [] }))
-
-    const searchArticle = (searchData.articles || searchData.results || [])?.find(a => a.slug === slug)
-
-    if (searchArticle) {
-      const fullArticle = await fetchAPI(`/api/v1/articles/${searchArticle.id}`)
-      return normalizeArticle(fullArticle.article)
-    }
-
-    // Fall back to listing articles — slug may not match search keywords
-    const queryParams = new URLSearchParams({
-      status: "published",
-      limit: "1000",
-      sort: "date",
-      order: "desc",
-    })
-
-    const data = await fetchAPI(`/api/v1/articles?${queryParams}`)
-    const article = data.articles?.find(a => a.slug === slug)
-
-    if (article) {
-      const fullArticle = await fetchAPI(`/api/v1/articles/${article.id}`)
-      return normalizeArticle(fullArticle.article)
-    }
-
-    return null
+    const data = await fetchAPI(
+      `/api/v1/articles/slug/${encodeURIComponent(slug)}`
+    )
+    return data?.article ? normalizeArticle(data.article) : null
   } catch (error) {
-    console.error("Error fetching article:", error)
+    if (error.status === 404) {
+      return null
+    }
+    console.error(`Error fetching article (${slug}):`, error.message || error)
     return null
   }
 }
@@ -313,8 +291,14 @@ export async function countArticlesByCategory(slug) {
   }
 }
 
+let categoriesCache = null
+
 // Category Endpoints
 export async function fetchCategories() {
+  if (categoriesCache) {
+    return categoriesCache
+  }
+
   // Check if we should use API categories or predefined ones
   if (siteSettings.use_api_categories === false) {
     // Use predefined categories from site-settings.json
@@ -324,12 +308,19 @@ export async function fetchCategories() {
   // Otherwise, fetch from API
   try {
     const data = await fetchAPI("/api/v1/categories")
-    return data.categories || []
+    categoriesCache = data.categories || []
+    return categoriesCache
   } catch (error) {
     console.error("Error fetching categories from API:", error)
     // Fallback to predefined categories if API fails
     return siteSettings.predefined_categories || []
   }
+}
+
+export async function getCategoryBySlug(slug) {
+  if (!slug) return null
+  const categories = await fetchCategories()
+  return categories.find(cat => cat.slug === slug) || null
 }
 
 export async function fetchCategorySlug() {

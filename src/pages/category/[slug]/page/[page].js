@@ -2,7 +2,7 @@ import Layout from "@/components/layout"
 import ArticleList from "@/components/article/ArticleList"
 import Meta from "@/components/meta"
 import {
-  fetchByCategory,
+  getCategoryBySlug,
   fetchCategorySlug,
   fetchPaginated,
   countArticlesByCategory,
@@ -33,7 +33,7 @@ export async function getStaticProps({ params }) {
   const postsPerPage = config.posts_per_page || 9
 
   try {
-    const { category } = await fetchByCategory(params.slug)
+    const category = await getCategoryBySlug(params.slug)
 
     // If category doesn't exist, return 404
     if (!category) {
@@ -78,10 +78,17 @@ export async function getStaticPaths() {
     const categories = await fetchCategorySlug()
     const paths = []
 
+    // Pre-render only up to page 3 per category at build time
+    // Deep pages are generated on-demand via fallback: "blocking" and cached by ISR
+    const MAX_BUILD_PAGES = 3
+
     // For each category, create pagination paths
     for (const category of categories) {
       const totalArticles = await countArticlesByCategory(category.slug)
-      const pages = Math.ceil(totalArticles / postsPerPage)
+      const pages = Math.min(
+        Math.ceil(totalArticles / postsPerPage),
+        MAX_BUILD_PAGES
+      )
 
       // Generate paths for pages 2 onwards (page 1 is handled by [slug].js)
       for (let i = 2; i <= pages; i++) {
